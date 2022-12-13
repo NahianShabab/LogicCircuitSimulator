@@ -1,0 +1,17 @@
+Input A true
+Input B true
+output F
+gate and and1
+gate and and2
+gate not not1
+gate not not2
+gate or or1
+connect A and1
+connect B and1
+connect A not1
+connect B not2
+connect not1 and2
+connect not2 and2
+connect and1 or1
+connect and2 or1
+connect or1 F
