@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import LoopDetector.LoopDetector;
 import Node.Node;
 import Node.Gate.And;
 import Node.Gate.Not;
@@ -61,6 +62,11 @@ public class TextSimulate {
             catch(Exception e){
                 System.out.println("Found Error!");
             }
+        }
+        LoopDetector loopDetector=new LoopDetector();
+        if(loopDetector.has_loop(nodes)){
+            System.out.println("Has Loops");
+            return;
         }
         for(Output o:outputs){
             System.out.println(o.label+" : "+o.get_output());

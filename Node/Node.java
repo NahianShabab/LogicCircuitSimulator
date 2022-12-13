@@ -4,6 +4,7 @@ import java.util.List;
 
 public abstract class Node{
 	protected List<Node> inputs;
+	public NodeColor nodeColor;
 	public String label;
 	public Node(String label){
 		inputs=new ArrayList<Node>();
@@ -17,6 +18,9 @@ public abstract class Node{
 				inputs.add(node);
 			}
 		}
+	}
+	public List<Node> get_inputs(){
+		return inputs;
 	}
 	// unfinished
 	public abstract boolean get_output();
