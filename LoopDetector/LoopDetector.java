@@ -2,7 +2,6 @@ package LoopDetector;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 import Node.Node;
 import Node.NodeColor;

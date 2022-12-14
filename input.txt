@@ -1,22 +1,74 @@
-gate and and1
-gate and and2
-gate or or1
-gate or or2
-gate or or3
-gate not not1
-input A true
-input B true
-input C false
-output F
-connect A and1
-connect B and1
-connect B or1
-connect and1 or2
-connect C or1
-connect or1 or2
-connect or1 not1
-connect or2 and2
-connect not1 and2
-connect and2 or3
-connect C or3
-connect or3 F
+#decoder circuit
+input a
+input b
+input c
+output d0
+output d1
+output d2
+output d3
+output d4
+output d5
+output d6
+output d7
+gate not a'
+gate not b'
+gate not c'
+connect a a'
+connect b b'
+connect c c'
+gate and a0
+gate and a1
+gate and a2
+gate and a3
+gate and a4
+gate and a5
+gate and a6
+gate and a7
+
+#d0
+connect a' a0
+connect b' a0
+connect c' a0
+connect a0 d0
+
+#d1
+connect a' a1
+connect b' a1
+connect c a1
+connect a1 d1
+
+#d2
+connect a' a2
+connect b a2
+connect c' a2
+connect a2 d2
+
+#d3
+connect a' a3
+connect b a3
+connect c a3
+connect a3 d3
+
+#d4
+connect a a4
+connect b' a4
+connect c' a4
+connect a4 d4
+
+#d5
+connect a a5
+connect b' a5
+connect c a5
+connect a5 d5
+
+#d6
+connect a a6
+connect b a6
+connect c' a6
+connect a6 d6
+
+#d7
+connect a a7
+connect b a7
+connect c a7
+connect a7 d7
